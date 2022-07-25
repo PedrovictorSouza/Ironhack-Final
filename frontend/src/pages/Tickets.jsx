@@ -37,6 +37,7 @@ function Tickets() {
                     <div>Date</div>
                     <div>Product</div>
                     <div>Status</div>
+
                     <div></div>
                 </div>
                 {tickets.map((ticket) => (

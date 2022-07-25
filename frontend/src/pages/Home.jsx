@@ -5,8 +5,8 @@ function Home() {
     return (
         <>
             <section className='heading'>
-                <h1>What do you need help with?</h1>
-                <p>Please choose from an option below</p>
+                <h1>Before proposal</h1>
+                <p>A better way to make recurring decisions</p>
             </section>
 
             <Link to='/new-ticket' className='btn btn-reverse btn-block'>
@@ -16,6 +16,9 @@ function Home() {
             <Link to='/tickets' className='btn btn-reverse btn-block'>
                 <FaQuestionCircle /> View My Tickets
             </Link>
+
+            <p>Dont have an account?
+                <Link style={{color: "blue"}} to='/register'> click here to register.</Link></p>
         </>
     )
 }

@@ -17,4 +17,4 @@ function NoteItem({note}) {
     )
 }
 
-export default NoteItem;
+export default NoteItem; 

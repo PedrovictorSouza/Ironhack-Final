@@ -20,6 +20,7 @@ function Header() {
       <div className="logo">
         <Link to="/">Support Desk</Link>
       </div>
+      
       <ul>
         {user ? (
           <li>
@@ -42,6 +43,14 @@ function Header() {
             </li>
           </>
         )}
+      </ul>
+
+
+
+      <ul>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
       </ul>
     </header>
   );
