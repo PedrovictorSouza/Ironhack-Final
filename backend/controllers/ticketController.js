@@ -51,28 +51,35 @@ const getTicket = asyncHandler(async (req,res) => {
 // @desc POST /api/tickets
 // @desc Private
 const createTicket = asyncHandler(async (req,res) => {
-    const {product, description} = req.body
+    
+    const {description, check, title} = req.body;
+    
 
-    if(!product || !description) {
+    if(!description || !check || !title) {
         res.status(400)
-        throw new Error('Please add product and description')
+        throw new Error('Please add description and check');
     }
 
-    const user = await User.findById(req.user.id)
+    const user = await User.findById(req.user.id);
+    console.log(user);
 
     if(!user) {
         res.status(401)
         throw new Error('User not found');
     }
-
-    const ticket = await Ticket.create({
-        product,
+    
+   
+    Ticket.create({
+        title,
         description,
+        check,
         user: req.user.id,
-        status: 'new'
-    })
+        status: 'new',
+    }).then(response => {console.log(response)});
+    console.log(ticket);
 
     res.status(201).json({ticket});
+    console.log('nunca é chamado');
 })
 
 // @desc Delete user ticket

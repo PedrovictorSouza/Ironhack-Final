@@ -28,6 +28,43 @@ li {
   line-height: 2.2;
 }
 
+fieldset {
+  border: none;
+  background: none;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  width: fit-content;
+  margin: 0px;
+  margin-right: 5px;
+  -ms-transform: scale(1.6); /* IE 9 */
+  -webkit-transform: scale(1.6); /* Chrome, Safari, Opera */
+  transform: scale(1.6);
+}
+
+input, textarea, fieldset{
+  width: fit-content;
+}
+
+input#title, textarea {
+  width: 650px;
+}
+
+textarea {
+  height: 100px;
+}
+
+
+
 h1,
 h2,
 h3 {
@@ -50,6 +87,21 @@ h3 {
 
 .checkbox_container p {
   margin-left: 5px;
+}
+
+.form-userInfo {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.form-userInfo div {
+  width: fit-content;
+  margin-right: 50px;
+}
+
+.form-userInfo input {
+  background: none;
+  border: none;
 }
 
 .header {
@@ -92,6 +144,7 @@ h3 {
 
 .heading p {
   color: #828282;
+  font-size: .6em;
 }
 
 .boxes {
@@ -130,19 +183,13 @@ h3 {
 .form-group input,
 .form-group textarea,
 .form-group select {
-  width: 100%;
   padding: 10px;
   border: 1px solid #e6e6e6;
   border-radius: 5px;
-  margin-bottom: 10px;
   font-family: inherit;
 }
 
-.form-group label {
-  text-align: left;
-  display: block;
-  margin: 0 0 5px 3px;
-}
+
 
 .btn {
   padding: 10px 20px;
@@ -185,8 +232,19 @@ h3 {
 }
 
 .btn-back {
-  width: 150px;
-  margin-bottom: 20px;
+  width: fit-content;
+  margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: inherit;
+    padding: 0px;
+    border-bottom: 2px solid black;
+}
+
+.btn-back:hover {
+  color: blue;
+  border-bottom: 4px solid blue;
+  transition: .5s;
 }
 
 .btn:hover {

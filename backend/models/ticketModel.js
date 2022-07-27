@@ -1,21 +1,24 @@
 const mongoose = require('mongoose');
 
+
+//define the common properties that a collection will have
 const ticketSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User'
     },
-    product: {
+    title: {
         type: String,
-        required: [true, 'Please select a product'],
-        enum: ['iPhone', 'Macbook Pro', 'iMac', 'iPad'],
-        unique: true
+        required: [true, 'Please enter the title of the decision'],
     },
-    description: {
+    description: { 
         type: String,
         required: [true, 'Please enter a description of the issue'],
     },
+    check: {
+        type: Boolean
+    }, 
     status: {
         type: String,
         required: true,

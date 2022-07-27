@@ -34,12 +34,11 @@ function Tickets() {
             <h1>Tickets</h1>
             <div className='tickets'>
                 <div className='ticket-headings'>
+                    <div>Decision</div>
                     <div>Date</div>
-                    <div>Product</div>
-                    <div>Status</div>
-
-                    <div></div>
+                    <div>Status</div>    
                 </div>
+                
                 {tickets.map((ticket) => (
                     <TicketItem key={ticket._id} ticket={ticket}/>
                 ))}

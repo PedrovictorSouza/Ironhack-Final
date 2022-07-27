@@ -44,7 +44,6 @@ function Register() {
   };
 
   const onSubmit = (e) => {
-    debugger;
     e.preventDefault();
 
     if (password !== password2) {
