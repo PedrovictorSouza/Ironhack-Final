@@ -52,10 +52,10 @@ const getTicket = asyncHandler(async (req,res) => {
 // @desc Private
 const createTicket = asyncHandler(async (req,res) => {
     
-    const {description, check, title} = req.body;
+    const {description, title, answer1, answer2, answer3} = req.body;
     
 
-    if(!description || !check || !title) {
+    if(!description || !title ) {
         res.status(400)
         throw new Error('Please add description and check');
     }
@@ -72,7 +72,9 @@ const createTicket = asyncHandler(async (req,res) => {
     Ticket.create({
         title,
         description,
-        check,
+        answer1,
+        answer2,
+        answer3,
         user: req.user.id,
         status: 'new',
     }).then(response => {console.log(response)});

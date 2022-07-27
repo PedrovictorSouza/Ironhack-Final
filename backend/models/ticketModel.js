@@ -17,8 +17,18 @@ const ticketSchema = mongoose.Schema({
         required: [true, 'Please enter a description of the issue'],
     },
     check: {
+        type: Boolean,
+        required: false
+    },
+    answer1: {
         type: Boolean
-    }, 
+    },
+    answer2: {
+        type: Boolean
+    },
+    answer3: {
+        type: Boolean
+    },
     status: {
         type: String,
         required: true,

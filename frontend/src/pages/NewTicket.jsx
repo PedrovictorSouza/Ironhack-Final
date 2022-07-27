@@ -17,7 +17,10 @@ function NewTicket() {
   const [email] = useState(user.email);
   const [title, setTitle] = useState("");
 
-  const [check, setCheck] = useState(false);
+  //const [check, setCheck] = useState(false);
+  const [answer1, setAnswer1] = useState(false);
+  const [answer2, setAnswer2] = useState(false);
+  const [answer3, setAnswer3] = useState(false);
 
   const [description, setDescription] = useState("");
 
@@ -38,10 +41,9 @@ function NewTicket() {
   }, [dispatch, isError, isSuccess, navigate, message]);
 
   const onSubmit = (e) => {
-    console.log(e);
+    
     e.preventDefault();
-
-    dispatch(createTicket({ title, description, check }));
+    dispatch(createTicket({ title, description, answer1, answer2, answer3 }));
   };
 
   if (isLoading) {
@@ -121,8 +123,8 @@ function NewTicket() {
                   <input
                     type="radio"
                     name="Q1"
-                    value={check}
-                    onChange={(e) => setCheck(e.target.value)}
+                    value={answer1}
+                    onChange={(e) => setAnswer1(true)}
                   />
                   <p>Yes</p>
                 </label>
@@ -130,8 +132,8 @@ function NewTicket() {
                   <input
                     type="radio"
                     name="Q1"
-                    value={check}
-                    onChange={(e) => setCheck(e.target.value)}
+                    value={answer1}
+                    onChange={(e) => setAnswer1(false)}
                   />
                   <p>No</p>
                 </label>
@@ -150,6 +152,8 @@ function NewTicket() {
                   <input
                     type="radio"
                     name="Q2"
+                    value={answer2}
+                    onChange={(e) => setAnswer2(true)}
                   />
                   Yes
                 </label>
@@ -157,6 +161,8 @@ function NewTicket() {
                   <input
                     type="radio"
                     name="Q2"
+                    value={answer2}
+                    onChange={(e) => setAnswer2(false)}
                   />
                   No
                 </label>
@@ -175,6 +181,8 @@ function NewTicket() {
                   <input
                     type="radio"
                     name="Q3"
+                    value={answer3}
+                    onChange={(e) => setAnswer3(true)}
                   />
                   Yes
                 </label>
@@ -182,6 +190,8 @@ function NewTicket() {
                   <input
                     type="radio"
                     name="Q3"
+                    value={answer3}
+                    onChange={(e) => setAnswer3(false)}
                   />
                   No
                 </label>

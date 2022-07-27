@@ -38,6 +38,8 @@ function Ticket() {
     }
 
     
+
+    console.log(ticket);
     return <div className='ticket-page'>
         <header className="ticket-header">
             <BackButton url='/tickets' />
@@ -58,51 +60,51 @@ function Ticket() {
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>Yes</p>
+                <p>{String(ticket.answer1)}</p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>No</p>
+                <p></p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>resposta {ticket.checkC}</p>
+                <p>resposta </p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>resposta {ticket.checkD}</p>
+                <p>resposta</p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>resposta {ticket.checkE}</p>
+                <p>resposta</p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>resposta {ticket.checkF}</p>
+                <p>resposta </p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>resposta {ticket.checkG}</p>
+                <p>resposta</p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>resposta {ticket.checkH}</p>
+                <p>resposta</p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>resposta {ticket.checkI}</p>
+                <p>resposta</p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>resposta {ticket.checkJ}</p>
+                <p>resposta</p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>resposta {ticket.checkK}</p>
+                <p>resposta</p>
             </div>
             <div className='ticket-desc'>
                 <h3>Answer</h3>
-                <p>resposta {ticket.checkL}</p>
+                <p>resposta</p>
             </div>
         </header>
 
